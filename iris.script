@@ -1,4 +1,5 @@
-    zn "%SYS"
+   zn "%SYS"
+
     // Unexpire passwords and set up passwordless mode to simplify dev use.
     do ##class(Security.Users).UnExpireUserPasswords("*")
     zpm "install passwordless"
@@ -8,13 +9,7 @@
     zpm "install vscode-per-namespace-settings"
     zpm "install webterminal"
 
-    // this should be the place for individual application code.
-
-    zn "USER"
-    zpm "install MDX2JSON"
-    zpm "install samples-bi"
-    do EnableDeepSee^%SYS.cspServer("/csp(user/")
-    zpm "list"
+   // this should be the place for individual application code.
+   zpm "install alwo-unittest-ruleset-bulkprofile"
  
-    halt
-
+   halt
